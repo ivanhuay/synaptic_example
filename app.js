@@ -11,8 +11,8 @@ var Layer = synaptic.Layer;
 var Network = synaptic.Network;
 var Trainer = synaptic.Trainer;
 
-var inputLayer = new Layer(784);
-var hiddenLayer = new Layer(100);
+var inputLayer = new Layer(300);
+var hiddenLayer = new Layer(200);
 var outputLayer = new Layer(10);
 
 
@@ -30,9 +30,9 @@ var myNetwork = new Network({
 
 var trainer = new Trainer(myNetwork);
 trainer.train(trainingSet, {
-    rate: 0.2,
+    rate: 0.008,
     iterations: 20,
-    error: 0.1,
+    error: 0.8,
     shuffle: true,
     log: 1,
     cost: Trainer.cost.CROSS_ENTROPY
