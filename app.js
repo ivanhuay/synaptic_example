@@ -42,3 +42,4 @@ trainer.train(trainingSet, {
 
 console.log(myNetwork.activate(testSet[0].input));
 console.log(testSet[0].output);
+console.log(myNetwork.toJSON());
